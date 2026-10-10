@@ -29,6 +29,46 @@ body{
 .desktop{
     color:white;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    gap:10px;
 }
 
+.app-icon{
+    display: flex;
+    flex-direction:column;
+    align-items: flex-start;
+    gap: 5px;
+    padding: 5px;
+    width: fit-content;
+}
+
+.app-icon:hover{
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.15);
+    border-radius: 8px;
+    padding:10px ;
+    
+}
+
+.taskbar{
+    color:white;
+    background-color: rgb(56, 55, 55);
+    display: flex;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    gap:10px;
+}
+
+.start-icon{
+    cursor: pointer;
+    font-size:larger;
+    padding:8px;
+    border-radius: 8%;
+}
+
+.start-icon:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
