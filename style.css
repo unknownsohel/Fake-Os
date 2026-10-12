@@ -65,10 +65,21 @@ body{
 .start-icon{
     cursor: pointer;
     font-size:larger;
-    padding:8px;
+    padding:5px;
     border-radius: 8%;
 }
 
 .start-icon:hover {
     background-color: rgba(255, 255, 255, 0.2);
+}
+
+.start-menu{
+    display:none;
+    position: fixed;
+    bottom: 55px;
+    left:10px;
+    background-color: #252525;
+    color: white;
+    padding: 15px;
+    border-radius: 10px;
 }
