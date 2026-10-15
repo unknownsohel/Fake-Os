@@ -83,3 +83,42 @@ body{
     padding: 15px;
     border-radius: 10px;
 }
+
+.Notepad-app{
+    width: 400px;
+    height: 200px;
+    margin: 10px;
+    background-color: chocolate;
+    border-radius: 10px;
+    display: none;
+}
+
+.notepad-head {
+    height: 35px;
+    padding: 0 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: move;
+    background-color: #252525;
+    color: aliceblue;
+}
+
+.notepad-main{
+    height:150px;
+    color:white;
+    display: flex;
+    flex-direction: column;
+    gap:5px;
+}
+.buttons {
+    display: flex;
+    gap: 5px;
+}
+
+.notepad-main textarea {
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+}
+
