@@ -9,7 +9,7 @@ startIcon.addEventListener("click", function () {
 const startNotepad = document.querySelector(".Notepad-icon");
 const startNotepadApp = document.querySelector(".Notepad-app")
 startNotepad.addEventListener("click",function(){
-    startNotepadApp.style.display= "block";
+    startNotepadApp.style.display = "flex";
 });
 
 const closeNotepad = document.querySelector(".Notepad-app .notepad-head .buttons .close");
@@ -21,7 +21,11 @@ closeNotepad.addEventListener("click",function(){
 const clickNotepaddt = document.querySelector(".Notepad-app .notepad-head");
 const clickNotepad = document.querySelector(".Notepad-app .notepad-head .buttons .maximize");
 const maxNotepadApp = document.querySelector(".Notepad-app");
-clickNotepaddt.addEventListener("dblclick",function(){
-    maxNotepadApp.style.width ="100%";
-    maxNotepadApp.style.height="100%";
+
+clickNotepad.addEventListener("click", function () {
+    maxNotepadApp.classList.toggle("maximized");
+});
+
+clickNotepaddt.addEventListener("dblclick", function () {
+    maxNotepadApp.classList.toggle("maximized");
 });
