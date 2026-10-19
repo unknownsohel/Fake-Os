@@ -72,6 +72,14 @@ body{
 .start-icon:hover {
     background-color: rgba(255, 255, 255, 0.2);
 }
+.task-icon{
+    display: flex;
+    align-items:center;
+}
+
+.Notepad-task {
+    display:none;
+}
 
 .start-menu{
     display:none;
@@ -89,9 +97,10 @@ body{
     height: 200px;
     position: fixed;
     bottom: 60px;
-    left: 10px;
+    left: 30px;
     margin: 0;
-    background-color: chocolate;
+    padding: 5px;
+    background-color: rgb(30, 210, 150);
     border-radius: 10px;
     display: none;
     flex-direction:column;
@@ -137,5 +146,5 @@ body{
     bottom: 0;
     left: 0;
     border-radius: 0;
-    z-index: 10;
+    
 }
