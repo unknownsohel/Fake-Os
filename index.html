@@ -45,21 +45,100 @@
         <header class="notepad-head">
             <h1>Notepad</h1>
             <div class="buttons">
-                <button class="close">×</button>
-            <button class="minimize">-</button>
-            <button class="maximize">□</button>
+            <button class="note-mini">-</button>
+            <button class="note-maxi">□</button>
+            <button class="note-close">×</button>
             </div>
             
+            
         </header>
+
+        <div class="note-info">
+                <button class="note-file">File</button>
+                <button class="note-edit">Edit</button>
+                <button class="note-format">Format</button>
+                <button class="note-view">View</button>
+                <button class="note-help">Help</button>
+            </div>
+
         <main class="notepad-main">
             <textarea
             rows="5"
-            cols="40"
-            placeholder="Write your thoughts...">
+            cols="40">
         </textarea>
         </main>
         
     </div>
+    
+
+    
+<div class="Calculator-app">
+    <header class="calculator-head">
+        <span>🧮 Calculator</span>
+
+        <div class="calculator-controls">
+            <button class="calc-minimize">−</button>
+            <button class="calc-maximize">□</button>
+            <button class="calc-close">×</button>
+        </div>
+    </header>
+
+    <div class="calculator-body">
+        <div class="calculator-mode">
+            <span>☰</span>
+            <strong>Standard</strong>
+            <span>▣</span>
+            <span class="history">◷</span>
+        </div>
+
+        <div class="calculator-display">
+            <div class="previous-value"></div>
+            <div class="current-value">0</div>
+        </div>
+
+        <div class="memory-buttons">
+            <button disabled>MC</button>
+            <button disabled>MR</button>
+            <button>M+</button>
+            <button>M−</button>
+            <button>MS</button>
+            <button disabled>M⌄</button>
+        </div>
+
+        <div class="calculator-grid">
+            <button>%</button>
+            <button>CE</button>
+            <button>C</button>
+            <button>⌫</button>
+
+            <button>⅟x</button>
+            <button>x²</button>
+            <button>²√x</button>
+            <button>÷</button>
+
+            <button>7</button>
+            <button>8</button>
+            <button>9</button>
+            <button>×</button>
+
+            <button>4</button>
+            <button>5</button>
+            <button>6</button>
+            <button>−</button>
+
+            <button>1</button>
+            <button>2</button>
+            <button>3</button>
+            <button>+</button>
+
+            <button>+/−</button>
+            <button>0</button>
+            <button>.</button>
+            <button class="equals">=</button>
+        </div>
+    </div>
+</div>
+
 
     <footer class="taskbar">
         <div class="start-icon">
@@ -69,15 +148,15 @@
             Taskbar
         </div>
         <div class="task-icon">
-            <div class="Notepad-task">
+            <button class="Notepad-task">
                 📝
-            </div>
-            <div class="file-task">
+            </button>
+            <button class="file-task">
                 📁
-            </div>
-            <div class="Calculator-task">
+            </button>
+            <button class="Calculator-task">
                 🧮
-            </div>
+            </button>
         </div>
         
         <div class="start-menu">

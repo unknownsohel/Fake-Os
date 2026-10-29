@@ -75,6 +75,12 @@ body{
 .task-icon{
     display: flex;
     align-items:center;
+    flex-shrink: 0;
+    transition: background 0.15s;
+}
+
+.task-icon button{
+    background-color: rgba(255, 255, 255, 0.2);
 }
 
 .Notepad-task {
@@ -99,30 +105,77 @@ body{
     bottom: 60px;
     left: 30px;
     margin: 0;
-    padding: 5px;
-    background-color: rgb(30, 210, 150);
-    border-radius: 10px;
+    background-color: white;
     display: none;
     flex-direction:column;
     overflow:hidden;
     box-sizing:border-box;
 }
 
+.note-close:hover{
+    background-color: red;
+}
+
 .notepad-head {
-    height: 35px;
+    height: 25px;
     padding: 0 10px;
     display: flex;
-    align-items: center;
     justify-content: space-between;
     flex-shrink: 0;
     cursor: move;
-    background-color: #252525;
-    color: aliceblue;
+    color: black;
+    font-family: Arial, sans-serif;
+    font-size: 5px;
+    transition: background 0.15s;
 }
 
-.notepad-head h1 {
-    font-size: 24px;
-    margin: 0;
+.buttons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    
+}
+
+.buttons button:hover{
+    background-color: #ddd;
+}
+
+.buttons .note-close:hover{
+    background-color: red;
+}
+
+.buttons button {
+    width: 45px;
+    height: 35px;
+    border: none;
+    background: transparent;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.note-info {
+    display: flex;
+    align-items: center;
+    height: 15px;
+    background-color: #f3f3f3;
+    padding: 0 3px;
+    flex-shrink: 0;
+}
+
+.note-info button {
+    background: transparent;
+    border: none;
+    padding: 3px 7px;
+    font-size: 9px;
+    cursor: pointer;
+}
+
+.note-info button:hover {
+    background-color: #ddd;
+}
+
+.Notepad-app {
+    flex-direction: column;
 }
 
 .notepad-main {
@@ -147,4 +200,196 @@ body{
     left: 0;
     border-radius: 0;
     
+}
+
+.Calculator-app {
+    position: absolute;
+    top: 100px;
+    left: 300px;
+    width: 320px;
+    background: #202020;
+    color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+    font-family: Arial, sans-serif;
+}
+
+.calculator-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px;
+    background: #303030;
+    font-size: 16px;
+}
+
+.calculator-buttons button {
+    height: 60px;
+    border: none;
+    border-radius: 5px;
+    background: #3b3b3b;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    transition: background 0.15s;
+}
+
+
+.Calculator-app {
+    width: 120px;
+    height: 220px;
+    position: fixed;
+    left: 50px;
+    top: 30px;
+    background-color: #f3f3f3;
+    border: 1px solid #777;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.35);
+    display: none;
+    flex-direction: column;
+    font-family: "Segoe UI", Arial, sans-serif;
+    z-index: 10;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+
+.calculator-head {
+    height: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 5px;
+    background-color: #f3f3f3;
+    color: black;
+    flex-shrink: 0;
+    font-size: 8px;
+    cursor: move;
+}
+
+.calculator-controls {
+    display: flex;
+    height: 100%;
+}
+
+.calculator-controls button {
+    width: 20px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    font-size: 8px;
+}
+
+.calculator-controls button:hover {
+    background-color: #ddd;
+}
+
+.calculator-controls .calc-close:hover {
+    background-color: #e81123;
+    color: white;
+}
+
+
+.calculator-body {
+    display: flex;
+    color:#202020;
+    flex-direction: column;
+    flex: 1;
+    min-height: 0;
+}
+
+.calculator-mode {
+    height: 30px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 0 4px;
+    font-size: 4px;
+}
+
+.calculator-mode .history {
+    margin-left: auto;
+}
+
+.calculator-display {
+    height: 30px;
+    padding: 2px 6px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+    box-sizing: border-box;
+}
+
+.previous-value {
+    font-size: 13px;
+    color: #666;
+    min-height: 18px;
+}
+
+.current-value {
+    font-size: 15px;
+    font-weight: 100;
+    text-align: right;
+}
+
+
+.memory-buttons {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    height: 35px;
+    flex-shrink: 0;
+}
+
+.memory-buttons button {
+    background: transparent;
+    border: none;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.memory-buttons button:disabled {
+    color: #aaa;
+    cursor: default;
+}
+
+
+.calculator-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    gap: 1px;
+    padding: 1px;
+    flex: 1;
+    min-height: 0;
+}
+
+.calculator-grid button {
+    border: 1px solid #e0e0e0;
+    border-radius: 2px;
+    background-color: #fafafa;
+    font-size: 4px;
+    cursor: pointer;
+    font-family: inherit;
+}
+
+.calculator-grid button:hover {
+    background-color: #e1e1e1;
+}
+
+.calculator-grid button:active {
+    background-color: #ccc;
+}
+
+.calculator-grid .equals {
+    background-color: #0067a8;
+    color: white;
+}
+
+.calculator-grid .equals:hover {
+    background-color: #00558a;
+}
+
+.Calculator-task{
+    display:none;
 }
